@@ -1,17 +1,21 @@
 package vista;
 
+import controlador.Coordinador;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Alfredo Calle Aguilar
  */
 public class Login extends javax.swing.JFrame {
+    
+    private Coordinador coordinador;
 
-    /**
-     * Creates new form Login
-     */
+   
     public Login() {
         initComponents();
-        setLocationRelativeTo(null);
+        setLocationRelativeTo(null); // Centra la ventana
+        setIconImage(new ImageIcon(getClass().getResource("/images/kuribohicono.png")).getImage()); // Cambia el icono de la ventana(JFrame)
     }
 
     /**
@@ -152,9 +156,10 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton5ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    public void setCoordinador(Coordinador coordinador) {
+        this.coordinador = coordinador;
+    }
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -206,4 +211,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
+
+
 }
