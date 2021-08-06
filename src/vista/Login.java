@@ -92,6 +92,11 @@ public class Login extends javax.swing.JFrame {
         jButton1.setOpaque(false);
         jButton1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/botonlogin1.png"))); // NOI18N
         jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/botonlogin2.png"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 270, 30));
 
         jRadioButton4.setBackground(new java.awt.Color(255, 255, 255));
@@ -155,6 +160,10 @@ public class Login extends javax.swing.JFrame {
     private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton5ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        coordinador.jugar();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     public void setCoordinador(Coordinador coordinador) {
         this.coordinador = coordinador;
